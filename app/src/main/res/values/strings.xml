@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Star Seeker</string>
+    <string name="starList_prompt">現在位置から見える星座リスト</string>
+</resources>
