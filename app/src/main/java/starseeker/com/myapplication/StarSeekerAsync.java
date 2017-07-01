@@ -22,7 +22,10 @@ public class StarSeekerAsync extends AsyncTask<Map, Void, List<StarInfo>> {
         if(StarSeekerConst.EXECUTE_TYPE_SEARCH.equals(executeType)) {
             param.put(StarSeekerConst.EXECUTE_TYPE, StarSeekerConst.EXECUTE_TYPE_SEARCH);
             executor = new SearchExecutor();
-        } else if(StarSeekerConst.EXECITE_TYPE_FIND.equals(executeType)) {
+
+        // 現在はExecutor I/Fを実装しているのがSearchExecutorとFindExecutorの2つだけだが
+        // 今後増えたときは適宜 else if を記述する。
+        } else {
             param.put(StarSeekerConst.EXECUTE_TYPE, StarSeekerConst.EXECITE_TYPE_FIND);
             executor = new FindExecutor();
         }
